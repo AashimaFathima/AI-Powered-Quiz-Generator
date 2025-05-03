@@ -1,0 +1,227 @@
+/* Layout */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family:  Arial, sans-serif;
+  background: #0f172a; 
+  color: #e0f2f1; 
+}
+
+/* Container */
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #1e293b; 
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+/* Tabs */
+.tab-buttons {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 12px;
+  cursor: pointer;
+  background: #334155; 
+  border: none;
+  outline: none;
+  color: #7dd3fc; 
+  font-weight: 600;
+  transition: background 0.3s;
+  border-radius: 6px 6px 0 0;
+}
+
+.tab-btn.active,
+.tab-btn:hover {
+  background: #0ea5e9; 
+  color: #ffffff;
+}
+
+/* Tab content */
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+  margin-bottom: 15px;
+}
+
+/* Inputs */
+textarea, input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #334155;
+  border-radius: 6px;
+  background: #1e293b;
+  color: #e0f2f1;
+  margin-top: 10px;
+}
+
+/* Input group */
+.input-group {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.input-group label {
+  margin-right: 5px;
+  color: #bae6fd;
+}
+
+/* Buttons */
+.generate-btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #06b6d4; 
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.generate-btn:hover {
+  background: #98a6ac;
+}
+
+/* Loader */
+.loader {
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #06b6d4;
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* PDF Section */
+#pdf-tab {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 8px;
+}
+
+/* Quiz */
+.hidden { display: none; }
+
+.question {
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+}
+
+.option {
+  padding: 10px;
+  margin-bottom: 10px;
+  background: #334155;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #e0f2f1;
+  transition: background 0.3s;
+}
+
+.option:hover {
+  background: #0ea5e9;
+  color: #fff;
+}
+
+/* Fill in the blank input */
+.fib-input {
+  display: flex;
+  align-items: center;
+}
+
+.fib-input input {
+  flex: 1;
+  padding: 8px;
+  margin-right: 8px;
+  border: 1px solid #334155;
+  border-radius: 4px;
+  background: #1e293b;
+  color: #e0f2f1;
+}
+
+.fib-input button {
+  padding: 8px 16px;
+  background: #06b6d4;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Result Boxes */
+.score-box {
+  margin-top: 20px;
+  padding: 15px;
+  background: #14b8a6;
+  border-radius: 4px;
+  color: #fff;
+}
+
+.error-box {
+  margin-top: 20px;
+  padding: 15px;
+  background: #ef4444;
+  border-radius: 4px;
+  color: #fff;
+}
+
+.page-title {
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+/* Results */
+#results-container {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #0f172a;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.result-item {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #1e293b;
+  border-left: 5px solid #06b6d4;
+  border-radius: 8px;
+}
+
+.result-item:hover {
+  background-color: #334155;
+}
+
+.result-item .correct {
+  color: #22c55e;
+  font-weight: bold;
+}
+
+.result-item .incorrect {
+  color: #f87171;
+  font-weight: bold;
+}

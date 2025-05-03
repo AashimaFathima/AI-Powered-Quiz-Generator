@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>AI-Powered Quiz Generator</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <div class="container">
+    <h1 class="page-title">AI-Powered Quiz Generator</h1>
+
+    <!-- Input Section -->
+    <div class="input-section">
+      <div class="tab-buttons">
+        <button class="tab-btn active" onclick="switchTab('text')">Text Input</button>
+        <button class="tab-btn" onclick="switchTab('pdf')">PDF Upload</button>
+      </div>
+      <div id="text-tab" class="tab-content active">
+        <textarea id="text-input" placeholder="Paste your text here..."></textarea>
+      </div>
+      <div id="pdf-tab" class="tab-content">
+        <input type="file" id="pdf-input" accept=".pdf" />
+      </div>
+      <div class="question-numbers">
+        <div class="input-group">
+          <label>MCQs:</label>
+          <input type="number" id="mcqs" min="0" value="2" />
+        </div>
+        <div class="input-group">
+          <label>FIBs:</label>
+          <input type="number" id="fibs" min="0" value="2" />
+        </div>
+        <div class="input-group">
+          <label>T/F:</label>
+          <input type="number" id="tfs" min="0" value="2" />
+        </div>
+      </div>
+      <button class="generate-btn">Generate Questions</button>
+    </div>
+
+    <!-- Quiz & Score -->
+    <div id="quiz-section" class="hidden">
+      <div id="questions-container"></div>
+    </div>
+    <div id="score" class="score-box hidden"></div>
+
+    <!-- Show Results -->
+    <button id="show-results-btn" class="hidden">Show Results</button>
+    <div id="results-container"></div>
+
+    <!-- Error Display -->
+    <div id="error" class="error-box hidden"></div>
+  </div>
+
+  <!-- External JS -->
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
