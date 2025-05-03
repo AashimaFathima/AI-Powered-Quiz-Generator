@@ -81,12 +81,12 @@ Visit http://localhost:5000 and:
 
 ## 📸 Screenshots
 
-![Screenshot 445](screenshot/Screenshot%20(445).png)
-![Screenshot 446](screenshot/Screenshot%20(446).png)
-![Screenshot 452](screenshot/Screenshot%20(452).png)
-![Screenshot 456](screenshot/Screenshot%20(456).png)
-![Screenshot 460](screenshot/Screenshot%20(460).png)
-![Screenshot 463](screenshot/Screenshot%20(463).png)
+![Screenshot 445](Screenshot/Screenshot%20(445).png)
+![Screenshot 446](Screenshot/Screenshot%20(446).png)
+![Screenshot 452](Screenshot/Screenshot%20(452).png)
+![Screenshot 456](Screenshot/Screenshot%20(456).png)
+![Screenshot 460](Screenshot/Screenshot%20(460).png)
+![Screenshot 463](Screenshot/Screenshot%20(463).png)
 
 ## License 📜
  This project is licensed under the MIT License. See the LICENSE file for more details
