@@ -1,3 +1,5 @@
+const API_BASE = "http://18.61.166.247:5000";
+
 const generateBtn = document.querySelector('.generate-btn');
 const quizSection = document.getElementById('quiz-section');
 const questionsContainer = document.getElementById('questions-container');
@@ -46,7 +48,7 @@ async function handleGenerate() {
         showLoadingState(true);
 
         const response = await fetch(
-            "/generate",
+            `${API_BASE}/generate`,
             {
                 method: "POST",
                 body: formData
