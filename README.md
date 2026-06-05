@@ -1,92 +1,134 @@
 # AI-Powered Quiz Generator ⚡🧠
 
-Transform text/PDFs into interactive quizzes instantly using cutting-edge AI! Perfect for students, educators, and content creators.
+Generate interactive quizzes from plain text or PDF documents using Large Language Models. Built with Flask, Groq's ultra-fast inference engine, and deployed using Docker on AWS EC2.
 
-## Key Features 🚀
+Perfect for students, educators, and anyone looking to quickly turn study material into self-assessment quizzes.
 
-✅ **Smart Question Generation**  
-- Generate **20-30 questions** per session (MCQs + Fill-in-Blanks + True/False combo)
-- Dynamic capacity: Choose your mix (e.g., 10 MCQs + 15 FIBs + 5 T/F = 30 total)
-- Context-aware MCQs that test core concepts effectively
+---
 
-⚡ **Fast Performance**  
-- Average generation time: **2-4 seconds** 
-- Zero latency answer checking
-- Instant results display
+## ✨ Features
 
-📊 **Comprehensive Results System**  
-- Immediate score display with percentage
-- Side-by-side answer comparison
-- Fuzzy matching for flexible answer validation
+### 📄 Multiple Input Modes
 
-📚 **Content Adaptability**  
-- Handles academic papers, blog posts, technical docs
-- Maintains context across generated questions
-- Auto-optimizes question difficulty based on content
+* Paste raw text directly into the application.
+* Upload PDF documents for automatic text extraction.
+* Supports academic notes, research papers, blog posts, and technical documentation.
 
-## How It Works 🔧
+### 🧠 AI-Powered Question Generation
 
-1. **Input** → Paste text or upload PDF
-2. **AI Analysis** → Finds key concepts/dates/names
-3. **Question Creation** → Generates varied formats
-4. **Quality Check** → Removes duplicates
-5. **Quiz Delivery** → Interactive interface
+Generate a custom mix of:
 
-## Tech Stack 💻
+* Multiple Choice Questions (MCQs)
+* Fill in the Blanks (FIBs)
+* True / False Questions
 
- LLaMA 3 70B – Utilized for advanced question generation logic, offering high performance in logical reasoning tasks.
- Groq API – Employed for ultra-fast AI inference, to deliver low-latency responses.
- Python Flask - Server & API handling facilitating seamless communication between the frontend and backend      
- PyPDF2 - Text extraction from PDFs   
+Users can freely choose the number of each type (up to 30 questions total).
 
-## Installation 📦
+### 🎯 Interactive Quiz Experience
+
+* Real-time quiz interface
+* Immediate score calculation
+* Side-by-side answer comparison
+* Downloadable quiz results
+
+### 🛡️ Robust Backend
+
+* Input validation
+* Token limit management
+* Error handling and logging
+* Secure API key management using environment variables
+
+---
+
+## ⚙️ How It Works
+
+1. Enter text or upload a PDF.
+2. The application extracts and preprocesses the content.
+3. The Groq API generates AI-powered questions.
+4. Questions are converted into an interactive quiz.
+5. Users submit answers and receive instant feedback.
+
+---
+
+## 🛠️ Tech Stack
+
+| Category               | Technologies             |
+| ---------------------- | ------------------------ |
+| Backend                | Python, Flask            |
+| AI Model               | Llama 3.3 70B Versatile  |
+| AI Inference           | Groq API                 |
+| PDF Processing         | PyPDF2                   |
+| Frontend               | HTML, CSS, JavaScript    |
+| Deployment             | Docker, AWS EC2 (Ubuntu) |
+| Environment Management | python-dotenv            |
+| Logging                | Python Logging Module    |
+
+---
+
+## 🚀 Installation
 
 ```bash
-# 1. Clone repo
-git clone https://github.com/yourusername/quiz-generator.git
-cd quiz-generator
+# Clone repository
+git clone https://github.com/AashimaFathima/AI-Powered-Quiz-Generator.git
 
-# 2. Create virtual environment
-python -m venv venv
-source venv/bin/activate  # Linux/Mac
-venv\Scripts\activate    # Windows
+cd AI-Powered-Quiz-Generator
 
-# 3. Install dependencies
+# Create virtual environment
+python -m venv env
+
+# Windows
+env\Scripts\activate
+
+# Linux / macOS
+source env/bin/activate
+
+# Install dependencies
 pip install -r requirements.txt
 
-# 4. Add API key
-echo "GROQ_API_KEY=your_key_here" > .env
+# Add your API key
+echo GROQ_API_KEY=your_api_key_here > .env
 
-#5. Run the application 
-python app.py
+# Run application
+python main.py
 ```
 
-Visit http://localhost:5000 and:
+Open:
 
-1. Choose text or PDF input
-2. Select question counts (max 30 total)
-3. Generate → Take quiz → See results!
-
-📁 Project Structure
-
-    ├── app.py                 # Flask backend
-    ├── templates/
-    │   └── index.html         # Frontend HTML
-    ├── static/
-    │   ├── style.css          # Styling
-    │   └── script.js          # Frontend logic
-    ├── requirements.txt       # Python dependencies
-    └── .env                   # Environment variables
+```
+http://localhost:5000
+```
 
 
-## 📸 Screenshots
+## 📂 Project Structure
 
-![Screenshot 445](Screenshot/Screenshot%20(445).png)
-![Screenshot 446](Screenshot/Screenshot%20(446).png)
-![Screenshot 452](Screenshot/Screenshot%20(452).png)
-![Screenshot 456](Screenshot/Screenshot%20(456).png)
-![Screenshot 460](Screenshot/Screenshot%20(460).png)
-![Screenshot 463](Screenshot/Screenshot%20(463).png)
+```
+AI-Powered-Quiz-Generator/
+│
+├── frontend/
+│   ├── index.html
+│   ├── style.css
+│   └── script.js
+│
+├── templates/
+├── static/
+├── main.py
+├── Dockerfile
+├── requirements.txt
+├── .dockerignore
+└── README.md
+```
 
-## License 📜
- This project is licensed under the MIT License. See the LICENSE file for more details
+---
+
+## 🔮 Future Improvements
+
+* HTTPS-enabled deployment
+* Authentication system
+* Question difficulty customization
+* Multi-document quiz generation
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
